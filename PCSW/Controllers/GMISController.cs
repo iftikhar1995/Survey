@@ -229,19 +229,19 @@ namespace PCSW.Controllers
         [HttpPost]
         public ActionResult SaveDistrict(DistrictData d)
         {
-            try
-            {
+            //try
+            //{
                 using(PCSWEntities entites = new PCSWEntities())
                 {
                     entites.DistrictDatas.Add(d);
                     entites.SaveChanges();   
                 }
                 return Json(new { }, JsonRequestBehavior.AllowGet);
-            }
-            catch (Exception e)
-            {
+            //}
+            //catch (Exception e)
+            //{
                 return RedirectToAction("ErrorView", "GMIS", null);
-            }
+            //}
 
             
         }
