@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="PCSWModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="PCSWModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="DistrictData">
           <Key>
             <PropertyRef Name="D_Id" />
@@ -118,7 +118,8 @@
           <EntitySet Name="ProvincialData" EntityType="Self.ProvincialData" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ProvincialTaskForce" EntityType="Self.ProvincialTaskForce" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="PCSWModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -128,6 +129,7 @@
           </Key>
           <Property Name="D_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="D_Type" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="District" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Departments" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="NumEmployeeMale" Type="Int32" Nullable="false" />
           <Property Name="NumEmployeeFemale" Type="Int32" Nullable="false" />
@@ -157,7 +159,6 @@
           <Property Name="EstablishmentWHC" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="NumComplaints" Type="Int32" Nullable="false" />
           <Property Name="NumActionsTaken" Type="Int32" Nullable="false" />
-          <Property Name="District" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="ProvincialBoard">
           <Key>
@@ -213,10 +214,10 @@
           <Property Name="COCImplementation" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="EstablishmentWHC" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="NumComplaints" Type="Int32" Nullable="false" />
+          <Property Name="NumActionsTaken" Type="Int32" Nullable="false" />
           <Property Name="NumBoardBCT" Type="Int32" Nullable="false" />
           <Property Name="NumCommitteeBCT" Type="Int32" Nullable="false" />
           <Property Name="NumTaskForceBCT" Type="Int32" Nullable="false" />
-          <Property Name="NumActionsTaken" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="ProvincialTaskForce">
           <Key>
@@ -244,9 +245,9 @@
           <EntitySetMapping Name="DistrictDatas">
             <EntityTypeMapping TypeName="PCSWModel.DistrictData">
               <MappingFragment StoreEntitySet="DistrictData">
-                <ScalarProperty Name="District" ColumnName="District" />
                 <ScalarProperty Name="D_Id" ColumnName="D_Id" />
                 <ScalarProperty Name="D_Type" ColumnName="D_Type" />
+                <ScalarProperty Name="District" ColumnName="District" />
                 <ScalarProperty Name="Departments" ColumnName="Departments" />
                 <ScalarProperty Name="NumEmployeeMale" ColumnName="NumEmployeeMale" />
                 <ScalarProperty Name="NumEmployeeFemale" ColumnName="NumEmployeeFemale" />
@@ -304,7 +305,6 @@
           <EntitySetMapping Name="ProvincialDatas">
             <EntityTypeMapping TypeName="PCSWModel.ProvincialData">
               <MappingFragment StoreEntitySet="ProvincialData">
-                <ScalarProperty Name="NumActionsTaken" ColumnName="NumActionsTaken" />
                 <ScalarProperty Name="P_Id" ColumnName="P_Id" />
                 <ScalarProperty Name="P_Type" ColumnName="P_Type" />
                 <ScalarProperty Name="Departments" ColumnName="Departments" />
@@ -335,6 +335,7 @@
                 <ScalarProperty Name="COCImplementation" ColumnName="COCImplementation" />
                 <ScalarProperty Name="EstablishmentWHC" ColumnName="EstablishmentWHC" />
                 <ScalarProperty Name="NumComplaints" ColumnName="NumComplaints" />
+                <ScalarProperty Name="NumActionsTaken" ColumnName="NumActionsTaken" />
                 <ScalarProperty Name="NumBoardBCT" ColumnName="NumBoardBCT" />
                 <ScalarProperty Name="NumCommitteeBCT" ColumnName="NumCommitteeBCT" />
                 <ScalarProperty Name="NumTaskForceBCT" ColumnName="NumTaskForceBCT" />

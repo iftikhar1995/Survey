@@ -44,9 +44,9 @@ namespace DAL
         public string COCImplementation { get; set; }
         public string EstablishmentWHC { get; set; }
         public int NumComplaints { get; set; }
+        public int NumActionsTaken { get; set; }
         public int NumBoardBCT { get; set; }
         public int NumCommitteeBCT { get; set; }
         public int NumTaskForceBCT { get; set; }
-        public int NumActionsTaken { get; set; }
     }
 }

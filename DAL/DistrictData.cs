@@ -16,6 +16,7 @@ namespace DAL
     {
         public int D_Id { get; set; }
         public string D_Type { get; set; }
+        public string District { get; set; }
         public string Departments { get; set; }
         public int NumEmployeeMale { get; set; }
         public int NumEmployeeFemale { get; set; }
@@ -45,6 +46,5 @@ namespace DAL
         public string EstablishmentWHC { get; set; }
         public int NumComplaints { get; set; }
         public int NumActionsTaken { get; set; }
-        public string District { get; set; }
     }
 }

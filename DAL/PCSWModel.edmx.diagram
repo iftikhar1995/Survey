@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d726d38bab7b453ba792bdb2f0cc6d9b" Name="Diagram1" ZoomLevel="177">
+      <Diagram DiagramId="f53dc83daa994eb88f8bbb0b5ddadc72" Name="Diagram1" ZoomLevel="53">
         <EntityTypeShape EntityType="PCSWModel.DistrictData" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="PCSWModel.ProvincialBoard" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="PCSWModel.ProvincialCommittee" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
