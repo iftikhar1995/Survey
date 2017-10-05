@@ -1,0 +1,415 @@
+﻿@model List<SelectListItem>
+
+@{
+    ViewBag.Title = "Part2";
+    Layout = "~/Views/Shared/_PCSWLayout.cshtml";
+    var years = ViewBag.Years;
+}
+
+<div class="row content_area">
+    <div class="col-md-11 col-xs-11">
+
+       
+        
+        <!--Point Number 6-->
+        <div class="row">
+            <!--Prompt Message-->
+            <div class="col-md-4 col-xs-4">
+                <p class="prompt_text_part_2">Number of Women appointed to whom<br /> age relexation of upto 3 years<br /> was allowed</p>
+            </div>
+
+            <!--Input Area-->
+            <div class="col-md-4 col-xs-4">
+                <input type="number" placeholder="Please Enter a Number ..." class="form-control" id="numAgeRelexation3" name="numAgeRelexation3" min="0" />
+            </div>
+
+            <!--Error Area-->
+            <div class="col-md-4 col-xs-4">
+                <p id="numAgeRelexation3Err" class="text-center text-danger"></p>
+            </div>
+        </div>
+
+        <!--Point Number 7-->
+        <div class="row section_part_2_div">
+            <!--Prompt Message-->
+            <div class="col-md-4 col-xs-4">
+                <p class="prompt_text_part_2">Number of Women who Availed<br /> Maternity Leave</p>
+            </div>
+
+            <!--Input Area-->
+            <div class="col-md-4 col-xs-4">
+                <input type="number" placeholder="Please Enter a Number ..." class="form-control" id="numMaternityLeave" name="numAgeRelexation3" min="0" />
+            </div>
+
+            <!--Error Area-->
+            <div class="col-md-4 col-xs-4">
+                <p id="numMaternityLeaveErr" class="text-center text-danger"></p>
+            </div>
+        </div>
+
+        <!--Point Number 8-->
+        <div class="row section_part_2_div">
+            <!--Prompt Message-->
+            <div class="col-md-4 col-xs-4">
+                <p class="prompt_text_part_2">Number of Men who Availed Paternity<br /> Leave</p>
+            </div>
+
+            <!--Input Area-->
+            <div class="col-md-4 col-xs-4">
+                <input type="number" placeholder="Please Enter a Number ..." class="form-control" id="numPaternityLeave" name="numAgeRelexation3" min="0" />
+            </div>
+
+            <!--Error Area-->
+            <div class="col-md-4 col-xs-4">
+                <p id="numPaternityLeaveErr" class="text-center text-danger"></p>
+            </div>
+        </div>
+               
+        <!--Point Number 10-->
+        <div class="row section_part_2_div">
+            <!--Prompt Message-->
+            <div class="col-md-4 col-xs-4">
+                <p class="prompt_text_part_2">Establishment of Gender Mainstreaming<br />Committees</p>
+            </div>
+
+            <!--Input Area-->
+            <div class="col-md-4 col-xs-4">
+                <div class="row">
+                    <div class="col-md-5 col-xs-5">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <input type="radio" name="GMC" value="Yes" checked aria-label="...">
+                            </span>
+                            <input type="text" class="form-control" aria-label="..." value="YES" disabled>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-xs-5">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <input type="radio" name="GMC" value="No" aria-label="..." style="background-color:aliceblue">
+                            </span>
+                            <input type="text" class="form-control" aria-label="..." value="NO" disabled>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!--Point Number 11-->
+        <div class="row section_part_2_div">
+            <!--Prompt Message-->
+            <div class="col-md-4 col-xs-4">
+                <p class="prompt_text_part_2">Code of Conduct Implemented Under<br />Punjab Protection Against Harassment<br />Committee</p>
+            </div>
+
+            <!--Input Area-->
+            <div class="col-md-4 col-xs-4">
+                <div class="row">
+                    <div class="col-md-5 col-xs-5">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <input type="radio" name="COCPunjabProtection" value="Yes" checked aria-label="...">
+                            </span>
+                            <input type="text" class="form-control" aria-label="..." value="YES" disabled>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-xs-5">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <input type="radio" name="COCPunjabProtection" value="No" aria-label="..." style="background-color:aliceblue">
+                            </span>
+                            <input type="text" class="form-control" aria-label="..." value="NO" disabled>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!--Point Number 12-->
+        <!--P1-->
+        <div class="row section_part_2_div">
+            <!--Prompt Message-->
+            <div class="col-md-4 col-xs-4">
+                <p class="prompt_text_part_2">Establishment of Workplace Harassment<br />Committees</p>
+            </div>
+
+            <!--Input Area-->
+            <div class="col-md-4 col-xs-4">
+                <div class="row">
+                    <div class="col-md-5 col-xs-5">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <input type="radio" name="workplaceHarassmentCommittees" value="Yes" checked aria-label="...">
+                            </span>
+                            <input type="text" class="form-control" aria-label="..." value="YES" disabled>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-xs-5">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <input type="radio" name="workplaceHarassmentCommittees" value="No" aria-label="..." style="background-color:aliceblue">
+                            </span>
+                            <input type="text" class="form-control" aria-label="..." value="NO" disabled>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--P2-->
+        <div class="row section_part_2_div">
+            <!--Prompt Message-->
+            <div class="col-md-4 col-xs-4">
+                <p class="prompt_text_part_2">Number of Complaints<br />Received</p>
+            </div>
+
+            <!--Input Area-->
+            <div class="col-md-4 col-xs-4">
+                <input type="number" placeholder="Please Enter a Number ..." class="form-control" id="numComplaintsReceived" name="numComplaintsReceived" min="0" />
+            </div>
+
+            <!--Error Area-->
+            <div class="col-md-4 col-xs-4">
+                <p id="numComplaintsReceivedErr" class="text-center text-danger"></p>
+            </div>
+        </div>
+
+        <!--P3-->
+        <div class="row section_part_2_div">
+            <!--Prompt Message-->
+            <div class="col-md-4 col-xs-4">
+                <p class="prompt_text_part_2">Number of Actions<br />Taken</p>
+            </div>
+
+            <!--Input Area-->
+            <div class="col-md-4 col-xs-4">
+                <input type="number" placeholder="Please Enter a Number ..." class="form-control" id="numActionsTaken" name="numActionsTaken" min="0" />
+            </div>
+
+            <!--Error Area-->
+            <div class="col-md-4 col-xs-4">
+                <p id="numActionsTakenErr" class="text-center text-danger"></p>
+            </div>
+        </div>
+
+        <br />
+        <br />
+
+        <!--Point Number 9-->
+        <div class="row">
+            <div class="col-md-*">
+                <p class="section_heading_part1">Selection and Recruitment   _________________________________________________________________________________________________________</p>
+            </div>
+        </div>
+
+        <div class="row section_part_2_div">
+            <!--Prompt Message-->
+            <div class="col-md-4 col-xs-4">
+                <p class="text-center">Number of Selection and Recruitment Committees for regular and contractual employment</p>
+            </div>
+
+            <!--Input Area-->
+            <div class="col-md-3 col-xs-3">
+                <input type="number" placeholder="Please Enter a Number ..." class="form-control" id="numSelectionContractualCommittee1" name="numSelectionContractualCommittee1" min="0" />
+            </div>
+
+            <div class="col-md-3">
+                <!--Error Area-->
+                <div class="col-md-*">
+                    <p id="numSelectionContractualCommittee1Err" class="text-center text-danger"></p>
+                </div>
+            </div>
+
+        </div>
+
+        <br />
+        <br />
+
+        <div class="row">
+
+            <!--Prompt Message-->
+            <div class="col-md-4 col-xs-4">
+                <p class="text-center">Selection and Recruitment Committees for regular and contractual employment fulfilling the condition of at least one woman representative</p>
+            </div>
+
+            <!--Input Area-->
+            <div class="col-md-3">
+                <input type="number" placeholder="Please Enter a Number ..." class="form-control" id="numSelectionContractualCommittee2" name="numSelectionContractualCommittee2" min="0" />
+            </div>
+
+            <div class="col-md-3">
+                <!--Error Area-->
+                <div class="col-md-*">
+                    <p id="numSelectionContractualCommittee2Err" class="text-center text-danger"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row section_part_2_div">
+            <div class="col-md-offset-4 col-md-4 col-xs-offset-4 col-xs-4">
+                <button class="btn btn-primary btn_next_part_2" id="btn_next_part_2">NEXT</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section scripts {
+
+    <script type="text/javascript">
+              
+
+        $(document).ready(function () {
+
+            
+            var scrollUp = 700;
+            var numAgeRelexation3Err = $("#numAgeRelexation3Err");
+            var numMaternityLeaveErr = $("#numMaternityLeaveErr");
+            var numPaternityLeaveErr = $("#numPaternityLeaveErr");
+            var numComplaintsReceivedErr = $("#numComplaintsReceivedErr");
+            var numActionsTakenErr = $("#numActionsTakenErr");
+            var numSelectionContractualCommittee1Err = $("#numSelectionContractualCommittee1Err");
+            var numSelectionContractualCommittee2Err = $("#numSelectionContractualCommittee2Err");
+
+
+            $("#btn_next_part_2").click(function () {
+                if (checkInputData()) {
+                    sessionStorage.numAgeRelexation3 = $("#numAgeRelexation3").val();
+                    sessionStorage.numMaternityLeave = $("#numMaternityLeave").val();
+                    sessionStorage.numPaternityLeave = $("#numPaternityLeave").val();
+                    sessionStorage.numComplaintsReceived = $("#numComplaintsReceived").val();
+                    sessionStorage.numActionsTaken = $("#numActionsTaken").val();
+                    sessionStorage.GMC = $('input[name="GMC"]:checked').val();
+                    sessionStorage.COCPunjabProtection = $('input[name="COCPunjabProtection"]:checked').val();
+                    sessionStorage.workplaceHarassmentCommittees = $('input[name="workplaceHarassmentCommittees"]:checked').val();
+                    sessionStorage.numSelectionContractualCommittee1 = $('#numSelectionContractualCommittee1').val();
+                    sessionStorage.numSelectionContractualCommittee2 = $('#numSelectionContractualCommittee2').val();
+
+                    if (sessionStorage.choice == "District") {
+                        window.location.href = "/GMIS/Part3/";
+                    } else {
+                        window.location.href = "/GMIS/Part3V2/";
+                    }
+
+                }
+            });
+
+            function checkInputData() {
+                clearAllErr();
+                                
+                //-----------------------Age Relexation Check ------------------------------------------
+                var numAgeRelexation3 = $("#numAgeRelexation3").val();
+                if (!(/^\d+$/.test(numAgeRelexation3)) || Number(numAgeRelexation3) < 0) {
+                    numAgeRelexation3Err.html("<span>Invalid Value <br/> Please Enter a valid Number</span>");
+
+                    $('html, body').animate({
+                        scrollTop: $("#numAgeRelexation3").offset().top - 100
+                    }, 500);
+                    return false;
+                }
+                
+                if (Number(numAgeRelexation3) > Number(sessionStorage.TotalNumberOfWomen)) {
+                    numAgeRelexation3Err.html("<span>Number Exceed the Total Value <br/> Total Number of Women are <b>" + sessionStorage.TotalNumberOfWomen + "</b> </span>")
+
+                    $('html, body').animate({
+                        scrollTop: $("#numAgeRelexation3").offset().top - 100
+                    }, 500);
+
+                    return false;
+                }
+
+
+                //-----------------------Maternity Leave Check ------------------------------------------
+                var numMaternityLeave = $("#numMaternityLeave").val();
+                if (!(/^\d+$/.test(numMaternityLeave)) || Number(numMaternityLeave) < 0) {
+                    numMaternityLeaveErr.html("<span>Invalid Value <br/> Please Enter a valid Number</span>")
+                    $('html, body').animate({
+                        scrollTop: $("#numMaternityLeave").offset().top - 100
+                    }, 500);
+                    return false;
+                }
+
+                if (Number(numMaternityLeave) > Number(sessionStorage.TotalNumberOfWomen)) {
+                    numMaternityLeaveErr.html("<span>Number Exceed the Total Value <br/> Total Number of Women are <b>" + sessionStorage.TotalNumberOfWomen + "</b> </span>")
+                    $('html, body').animate({
+                        scrollTop: $("#numMaternityLeave").offset().top - 100
+                    }, 500);
+                    return false;
+                }
+
+                //-----------------------Paternity Leave Check ------------------------------------------
+                var numPaternityLeave = $("#numPaternityLeave").val();
+                if (!(/^\d+$/.test(numPaternityLeave)) || Number(numPaternityLeave) < 0) {
+                    numPaternityLeaveErr.html("<span>Invalid Value <br/> Please Enter a valid Number</span>")
+                    $('html, body').animate({
+                        scrollTop: $("#numPaternityLeave").offset().top - 100
+                    }, 500);
+                    return false;
+                }
+
+                if (Number(numPaternityLeave) > Number(sessionStorage.TotalNumberOfMen)) {
+                    numPaternityLeaveErr.html("<span>Number Exceed the Total Value <br/> Total Number of Men are <b>" + sessionStorage.TotalNumberOfWomen + "</b> </span>")
+                    $('html, body').animate({
+                        scrollTop: $("#numPaternityLeave").offset().top - 100
+                    }, 500);
+                    return false;
+                }
+                                
+                //--------------------------------- Complaints ----------------------------------------------------------
+                var numComplaintsReceived = $("#numComplaintsReceived").val();
+                if (!(/^\d+$/.test(numComplaintsReceived)) || Number(numComplaintsReceived) < 0) {
+                    numComplaintsReceivedErr.html("<span>Invalid Value <br/> Please Enter a valid Number</span>");
+                    $('html, body').animate({
+                        scrollTop: $("#numComplaintsReceived").offset().top - 100
+                    }, 500);
+                    return false;
+                }
+
+                var numActionsTaken = $("#numActionsTaken").val();
+                if (!(/^\d+$/.test(numActionsTaken)) || Number(numActionsTaken) < 0) {
+                    numActionsTakenErr.html("<span>Invalid Value <br/> Please Enter a valid Number</span>");
+                    $('html, body').animate({
+                        scrollTop: $("#numActionsTaken").offset().top - 100
+                    }, 500);
+                    return false;
+                }
+                
+                if (Number(numComplaintsReceived) < Number(numActionsTaken)) {
+                    numActionsTakenErr.html("<span>Number Exceed the Total Value <br/> Total Number of Complaints are <b>" + numComplaintsReceived + "</b> </span>")
+                    return false;
+                }
+
+                //-----------------------Selection Contractual Committee Check ------------------------------------------
+                var numSelectionContractualCommittee1 = $("#numSelectionContractualCommittee1").val();
+                if (!(/^\d+$/.test(numSelectionContractualCommittee1)) || Number(numSelectionContractualCommittee1) < 0) {
+                    numSelectionContractualCommittee1Err.html("<span>Invalid Value <br/> Please Enter a valid Number</span>")
+                    return false;
+                }
+                var numSelectionContractualCommittee2 = $("#numSelectionContractualCommittee2").val();
+                if (!(/^\d+$/.test(numSelectionContractualCommittee2)) || Number(numSelectionContractualCommittee2) < 0) {
+                    numSelectionContractualCommittee2Err.html("<span>Invalid Value <br/> Please Enter a valid Number</span>")
+                    return false;
+                }
+
+                return true;
+            }
+
+            function clearAllErr() {
+                numAgeRelexation3Err.text("");
+                numMaternityLeaveErr.text("");
+                numPaternityLeaveErr.text("");
+                numComplaintsReceivedErr.text("");
+                numActionsTakenErr.text("");
+                numSelectionContractualCommittee1Err.text("");
+                numSelectionContractualCommittee2Err.text("");
+                
+            }
+        });
+    </script>
+
+}

@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Download Report";
+    Layout = "~/Views/Shared/_PCSWLayout.cshtml";
+}
+
+<div class="row contentAreaDownloadView">
+    <div class="col-md-* col-xs-*">
+        <div class="row">
+            <div class="col-md-offset-3 col-md-4 col-xs-offset-3 col-xs-4">
+                <form method="post" action='@Url.Action("DownloadProvincial", "GMIS")'>
+                    <button class="btn btn-primary btnDownloadView" id="btnProvincialReport">Download Provincial Report</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-offset-3 col-md-4 col-xs-offset-3 col-xs-4">
+                <form method="post" action='@Url.Action("DownloadDistrict", "GMIS")'>
+                    <button class="btn btn-primary btnDownloadView" id="btnDistrictReport">Download District Report</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-offset-3 col-md-4 col-xs-offset-3 col-xs-4">
+                <button class="btn btn-primary btnDownloadView" id="btnGenerateReport">Generate Report</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+@section scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#btnGenerateReport").click(function () {
+                window.location.href = "/GMIS/Index/";
+            });
+        });
+    </script>
+}
+

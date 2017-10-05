@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PCSWModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DistrictData">
+          <Key>
+            <PropertyRef Name="D_Id" />
+          </Key>
+          <Property Name="D_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="D_Type" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="District" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Departments" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="NumEmployeeMale" Type="int" Nullable="false" />
+          <Property Name="NumEmployeeFemale" Type="int" Nullable="false" />
+          <Property Name="NumEmployeeMaleFrom2012" Type="int" Nullable="false" />
+          <Property Name="NumEmployeeFemaleFrom2012" Type="int" Nullable="false" />
+          <Property Name="NumGazettedMale" Type="int" Nullable="false" />
+          <Property Name="NumGazettedFemale" Type="int" Nullable="false" />
+          <Property Name="NumGazettedMaleFrom2012" Type="int" Nullable="false" />
+          <Property Name="NumGazettedFemaleFrom2012" Type="int" Nullable="false" />
+          <Property Name="NumNonGazettedMale" Type="int" Nullable="false" />
+          <Property Name="NumNonGazettedFemale" Type="int" Nullable="false" />
+          <Property Name="NumNonGazettedMaleFrom2012" Type="int" Nullable="false" />
+          <Property Name="NumNonGazettedFemaleFrom2012" Type="int" Nullable="false" />
+          <Property Name="NumContractMale" Type="int" Nullable="false" />
+          <Property Name="NumContractFemale" Type="int" Nullable="false" />
+          <Property Name="NumContractMaleFrom2012" Type="int" Nullable="false" />
+          <Property Name="NumContractFemaleFrom2012" Type="int" Nullable="false" />
+          <Property Name="NumWomenWashrooms" Type="int" Nullable="false" />
+          <Property Name="NumWomenPrayerRooms" Type="int" Nullable="false" />
+          <Property Name="NumAgeRelaxation3" Type="int" Nullable="false" />
+          <Property Name="NumMaternityLeave" Type="int" Nullable="false" />
+          <Property Name="NumPaternityLeave" Type="int" Nullable="false" />
+          <Property Name="NumSRCForRegular" Type="int" Nullable="false" />
+          <Property Name="NumSRCForRegularWithOneWomen" Type="int" Nullable="false" />
+          <Property Name="GMCEstablishment" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="COCImplementation" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="EstablishmentWHC" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="NumComplaints" Type="int" Nullable="false" />
+          <Property Name="NumActionsTaken" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProvincialBoards">
+          <Key>
+            <PropertyRef Name="PB_Id" />
+          </Key>
+          <Property Name="PB_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="P_Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="NumMale" Type="int" Nullable="false" />
+          <Property Name="NumFemale" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProvincialCommittee">
+          <Key>
+            <PropertyRef Name="PC_Id" />
+          </Key>
+          <Property Name="PC_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="P_Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="NumMale" Type="int" Nullable="false" />
+          <Property Name="NumFemale" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProvincialData">
+          <Key>
+            <PropertyRef Name="P_Id" />
+          </Key>
+          <Property Name="P_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="P_Type" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Departments" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="NumEmployeeMale" Type="int" Nullable="false" />
+          <Property Name="NumEmployeeFemale" Type="int" Nullable="false" />
+          <Property Name="NumEmployeeMaleFrom2012" Type="int" Nullable="false" />
+          <Property Name="NumEmployeeFemaleFrom2012" Type="int" Nullable="false" />
+          <Property Name="NumGazettedMale" Type="int" Nullable="false" />
+          <Property Name="NumGazettedFemale" Type="int" Nullable="false" />
+          <Property Name="NumGazettedMaleFrom2012" Type="int" Nullable="false" />
+          <Property Name="NumGazettedFemaleFrom2012" Type="int" Nullable="false" />
+          <Property Name="NumNonGazettedMale" Type="int" Nullable="false" />
+          <Property Name="NumNonGazettedFemale" Type="int" Nullable="false" />
+          <Property Name="NumNonGazettedMaleFrom2012" Type="int" Nullable="false" />
+          <Property Name="NumNonGazettedFemaleFrom2012" Type="int" Nullable="false" />
+          <Property Name="NumContractMale" Type="int" Nullable="false" />
+          <Property Name="NumContractFemale" Type="int" Nullable="false" />
+          <Property Name="NumContractMaleFrom2012" Type="int" Nullable="false" />
+          <Property Name="NumContractFemaleFrom2012" Type="int" Nullable="false" />
+          <Property Name="NumWomenWashrooms" Type="int" Nullable="false" />
+          <Property Name="NumWomenPrayerRooms" Type="int" Nullable="false" />
+          <Property Name="NumAgeRelaxation3" Type="int" Nullable="false" />
+          <Property Name="NumMaternityLeave" Type="int" Nullable="false" />
+          <Property Name="NumPaternityLeave" Type="int" Nullable="false" />
+          <Property Name="NumSRCForRegular" Type="int" Nullable="false" />
+          <Property Name="NumSRCForRegularWithOneWomen" Type="int" Nullable="false" />
+          <Property Name="GMCEstablishment" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="COCImplementation" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="EstablishmentWHC" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="NumComplaints" Type="int" Nullable="false" />
+          <Property Name="NumActionsTaken" Type="int" Nullable="false" />
+          <Property Name="NumBoardBCT" Type="int" Nullable="false" />
+          <Property Name="NumCommitteeBCT" Type="int" Nullable="false" />
+          <Property Name="NumTaskForceBCT" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProvincialTaskForce">
+          <Key>
+            <PropertyRef Name="PT_Id" />
+          </Key>
+          <Property Name="PT_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="P_Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="NumMale" Type="int" Nullable="false" />
+          <Property Name="NumFemale" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="PCSWModelStoreContainer">
+          <EntitySet Name="DistrictData" EntityType="Self.DistrictData" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProvincialBoards" EntityType="Self.ProvincialBoards" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProvincialCommittee" EntityType="Self.ProvincialCommittee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProvincialData" EntityType="Self.ProvincialData" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProvincialTaskForce" EntityType="Self.ProvincialTaskForce" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PCSWModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="DistrictData">
+          <Key>
+            <PropertyRef Name="D_Id" />
+          </Key>
+          <Property Name="D_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="D_Type" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Departments" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NumEmployeeMale" Type="Int32" Nullable="false" />
+          <Property Name="NumEmployeeFemale" Type="Int32" Nullable="false" />
+          <Property Name="NumEmployeeMaleFrom2012" Type="Int32" Nullable="false" />
+          <Property Name="NumEmployeeFemaleFrom2012" Type="Int32" Nullable="false" />
+          <Property Name="NumGazettedMale" Type="Int32" Nullable="false" />
+          <Property Name="NumGazettedFemale" Type="Int32" Nullable="false" />
+          <Property Name="NumGazettedMaleFrom2012" Type="Int32" Nullable="false" />
+          <Property Name="NumGazettedFemaleFrom2012" Type="Int32" Nullable="false" />
+          <Property Name="NumNonGazettedMale" Type="Int32" Nullable="false" />
+          <Property Name="NumNonGazettedFemale" Type="Int32" Nullable="false" />
+          <Property Name="NumNonGazettedMaleFrom2012" Type="Int32" Nullable="false" />
+          <Property Name="NumNonGazettedFemaleFrom2012" Type="Int32" Nullable="false" />
+          <Property Name="NumContractMale" Type="Int32" Nullable="false" />
+          <Property Name="NumContractFemale" Type="Int32" Nullable="false" />
+          <Property Name="NumContractMaleFrom2012" Type="Int32" Nullable="false" />
+          <Property Name="NumContractFemaleFrom2012" Type="Int32" Nullable="false" />
+          <Property Name="NumWomenWashrooms" Type="Int32" Nullable="false" />
+          <Property Name="NumWomenPrayerRooms" Type="Int32" Nullable="false" />
+          <Property Name="NumAgeRelaxation3" Type="Int32" Nullable="false" />
+          <Property Name="NumMaternityLeave" Type="Int32" Nullable="false" />
+          <Property Name="NumPaternityLeave" Type="Int32" Nullable="false" />
+          <Property Name="NumSRCForRegular" Type="Int32" Nullable="false" />
+          <Property Name="NumSRCForRegularWithOneWomen" Type="Int32" Nullable="false" />
+          <Property Name="GMCEstablishment" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="COCImplementation" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EstablishmentWHC" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NumComplaints" Type="Int32" Nullable="false" />
+          <Property Name="NumActionsTaken" Type="Int32" Nullable="false" />
+          <Property Name="District" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ProvincialBoard">
+          <Key>
+            <PropertyRef Name="PB_Id" />
+          </Key>
+          <Property Name="PB_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="P_Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NumMale" Type="Int32" Nullable="false" />
+          <Property Name="NumFemale" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProvincialCommittee">
+          <Key>
+            <PropertyRef Name="PC_Id" />
+          </Key>
+          <Property Name="PC_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="P_Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NumMale" Type="Int32" Nullable="false" />
+          <Property Name="NumFemale" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProvincialData">
+          <Key>
+            <PropertyRef Name="P_Id" />
+          </Key>
+          <Property Name="P_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="P_Type" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Departments" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NumEmployeeMale" Type="Int32" Nullable="false" />
+          <Property Name="NumEmployeeFemale" Type="Int32" Nullable="false" />
+          <Property Name="NumEmployeeMaleFrom2012" Type="Int32" Nullable="false" />
+          <Property Name="NumEmployeeFemaleFrom2012" Type="Int32" Nullable="false" />
+          <Property Name="NumGazettedMale" Type="Int32" Nullable="false" />
+          <Property Name="NumGazettedFemale" Type="Int32" Nullable="false" />
+          <Property Name="NumGazettedMaleFrom2012" Type="Int32" Nullable="false" />
+          <Property Name="NumGazettedFemaleFrom2012" Type="Int32" Nullable="false" />
+          <Property Name="NumNonGazettedMale" Type="Int32" Nullable="false" />
+          <Property Name="NumNonGazettedFemale" Type="Int32" Nullable="false" />
+          <Property Name="NumNonGazettedMaleFrom2012" Type="Int32" Nullable="false" />
+          <Property Name="NumNonGazettedFemaleFrom2012" Type="Int32" Nullable="false" />
+          <Property Name="NumContractMale" Type="Int32" Nullable="false" />
+          <Property Name="NumContractFemale" Type="Int32" Nullable="false" />
+          <Property Name="NumContractMaleFrom2012" Type="Int32" Nullable="false" />
+          <Property Name="NumContractFemaleFrom2012" Type="Int32" Nullable="false" />
+          <Property Name="NumWomenWashrooms" Type="Int32" Nullable="false" />
+          <Property Name="NumWomenPrayerRooms" Type="Int32" Nullable="false" />
+          <Property Name="NumAgeRelaxation3" Type="Int32" Nullable="false" />
+          <Property Name="NumMaternityLeave" Type="Int32" Nullable="false" />
+          <Property Name="NumPaternityLeave" Type="Int32" Nullable="false" />
+          <Property Name="NumSRCForRegular" Type="Int32" Nullable="false" />
+          <Property Name="NumSRCForRegularWithOneWomen" Type="Int32" Nullable="false" />
+          <Property Name="GMCEstablishment" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="COCImplementation" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EstablishmentWHC" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NumComplaints" Type="Int32" Nullable="false" />
+          <Property Name="NumBoardBCT" Type="Int32" Nullable="false" />
+          <Property Name="NumCommitteeBCT" Type="Int32" Nullable="false" />
+          <Property Name="NumTaskForceBCT" Type="Int32" Nullable="false" />
+          <Property Name="NumActionsTaken" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProvincialTaskForce">
+          <Key>
+            <PropertyRef Name="PT_Id" />
+          </Key>
+          <Property Name="PT_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="P_Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NumMale" Type="Int32" Nullable="false" />
+          <Property Name="NumFemale" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="PCSWEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DistrictDatas" EntityType="Self.DistrictData" />
+          <EntitySet Name="ProvincialBoards" EntityType="Self.ProvincialBoard" />
+          <EntitySet Name="ProvincialCommittees" EntityType="Self.ProvincialCommittee" />
+          <EntitySet Name="ProvincialDatas" EntityType="Self.ProvincialData" />
+          <EntitySet Name="ProvincialTaskForces" EntityType="Self.ProvincialTaskForce" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PCSWModelStoreContainer" CdmEntityContainer="PCSWEntities">
+          <EntitySetMapping Name="DistrictDatas">
+            <EntityTypeMapping TypeName="PCSWModel.DistrictData">
+              <MappingFragment StoreEntitySet="DistrictData">
+                <ScalarProperty Name="District" ColumnName="District" />
+                <ScalarProperty Name="D_Id" ColumnName="D_Id" />
+                <ScalarProperty Name="D_Type" ColumnName="D_Type" />
+                <ScalarProperty Name="Departments" ColumnName="Departments" />
+                <ScalarProperty Name="NumEmployeeMale" ColumnName="NumEmployeeMale" />
+                <ScalarProperty Name="NumEmployeeFemale" ColumnName="NumEmployeeFemale" />
+                <ScalarProperty Name="NumEmployeeMaleFrom2012" ColumnName="NumEmployeeMaleFrom2012" />
+                <ScalarProperty Name="NumEmployeeFemaleFrom2012" ColumnName="NumEmployeeFemaleFrom2012" />
+                <ScalarProperty Name="NumGazettedMale" ColumnName="NumGazettedMale" />
+                <ScalarProperty Name="NumGazettedFemale" ColumnName="NumGazettedFemale" />
+                <ScalarProperty Name="NumGazettedMaleFrom2012" ColumnName="NumGazettedMaleFrom2012" />
+                <ScalarProperty Name="NumGazettedFemaleFrom2012" ColumnName="NumGazettedFemaleFrom2012" />
+                <ScalarProperty Name="NumNonGazettedMale" ColumnName="NumNonGazettedMale" />
+                <ScalarProperty Name="NumNonGazettedFemale" ColumnName="NumNonGazettedFemale" />
+                <ScalarProperty Name="NumNonGazettedMaleFrom2012" ColumnName="NumNonGazettedMaleFrom2012" />
+                <ScalarProperty Name="NumNonGazettedFemaleFrom2012" ColumnName="NumNonGazettedFemaleFrom2012" />
+                <ScalarProperty Name="NumContractMale" ColumnName="NumContractMale" />
+                <ScalarProperty Name="NumContractFemale" ColumnName="NumContractFemale" />
+                <ScalarProperty Name="NumContractMaleFrom2012" ColumnName="NumContractMaleFrom2012" />
+                <ScalarProperty Name="NumContractFemaleFrom2012" ColumnName="NumContractFemaleFrom2012" />
+                <ScalarProperty Name="NumWomenWashrooms" ColumnName="NumWomenWashrooms" />
+                <ScalarProperty Name="NumWomenPrayerRooms" ColumnName="NumWomenPrayerRooms" />
+                <ScalarProperty Name="NumAgeRelaxation3" ColumnName="NumAgeRelaxation3" />
+                <ScalarProperty Name="NumMaternityLeave" ColumnName="NumMaternityLeave" />
+                <ScalarProperty Name="NumPaternityLeave" ColumnName="NumPaternityLeave" />
+                <ScalarProperty Name="NumSRCForRegular" ColumnName="NumSRCForRegular" />
+                <ScalarProperty Name="NumSRCForRegularWithOneWomen" ColumnName="NumSRCForRegularWithOneWomen" />
+                <ScalarProperty Name="GMCEstablishment" ColumnName="GMCEstablishment" />
+                <ScalarProperty Name="COCImplementation" ColumnName="COCImplementation" />
+                <ScalarProperty Name="EstablishmentWHC" ColumnName="EstablishmentWHC" />
+                <ScalarProperty Name="NumComplaints" ColumnName="NumComplaints" />
+                <ScalarProperty Name="NumActionsTaken" ColumnName="NumActionsTaken" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProvincialBoards">
+            <EntityTypeMapping TypeName="PCSWModel.ProvincialBoard">
+              <MappingFragment StoreEntitySet="ProvincialBoards">
+                <ScalarProperty Name="PB_Id" ColumnName="PB_Id" />
+                <ScalarProperty Name="P_Id" ColumnName="P_Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="NumMale" ColumnName="NumMale" />
+                <ScalarProperty Name="NumFemale" ColumnName="NumFemale" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProvincialCommittees">
+            <EntityTypeMapping TypeName="PCSWModel.ProvincialCommittee">
+              <MappingFragment StoreEntitySet="ProvincialCommittee">
+                <ScalarProperty Name="PC_Id" ColumnName="PC_Id" />
+                <ScalarProperty Name="P_Id" ColumnName="P_Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="NumMale" ColumnName="NumMale" />
+                <ScalarProperty Name="NumFemale" ColumnName="NumFemale" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProvincialDatas">
+            <EntityTypeMapping TypeName="PCSWModel.ProvincialData">
+              <MappingFragment StoreEntitySet="ProvincialData">
+                <ScalarProperty Name="NumActionsTaken" ColumnName="NumActionsTaken" />
+                <ScalarProperty Name="P_Id" ColumnName="P_Id" />
+                <ScalarProperty Name="P_Type" ColumnName="P_Type" />
+                <ScalarProperty Name="Departments" ColumnName="Departments" />
+                <ScalarProperty Name="NumEmployeeMale" ColumnName="NumEmployeeMale" />
+                <ScalarProperty Name="NumEmployeeFemale" ColumnName="NumEmployeeFemale" />
+                <ScalarProperty Name="NumEmployeeMaleFrom2012" ColumnName="NumEmployeeMaleFrom2012" />
+                <ScalarProperty Name="NumEmployeeFemaleFrom2012" ColumnName="NumEmployeeFemaleFrom2012" />
+                <ScalarProperty Name="NumGazettedMale" ColumnName="NumGazettedMale" />
+                <ScalarProperty Name="NumGazettedFemale" ColumnName="NumGazettedFemale" />
+                <ScalarProperty Name="NumGazettedMaleFrom2012" ColumnName="NumGazettedMaleFrom2012" />
+                <ScalarProperty Name="NumGazettedFemaleFrom2012" ColumnName="NumGazettedFemaleFrom2012" />
+                <ScalarProperty Name="NumNonGazettedMale" ColumnName="NumNonGazettedMale" />
+                <ScalarProperty Name="NumNonGazettedFemale" ColumnName="NumNonGazettedFemale" />
+                <ScalarProperty Name="NumNonGazettedMaleFrom2012" ColumnName="NumNonGazettedMaleFrom2012" />
+                <ScalarProperty Name="NumNonGazettedFemaleFrom2012" ColumnName="NumNonGazettedFemaleFrom2012" />
+                <ScalarProperty Name="NumContractMale" ColumnName="NumContractMale" />
+                <ScalarProperty Name="NumContractFemale" ColumnName="NumContractFemale" />
+                <ScalarProperty Name="NumContractMaleFrom2012" ColumnName="NumContractMaleFrom2012" />
+                <ScalarProperty Name="NumContractFemaleFrom2012" ColumnName="NumContractFemaleFrom2012" />
+                <ScalarProperty Name="NumWomenWashrooms" ColumnName="NumWomenWashrooms" />
+                <ScalarProperty Name="NumWomenPrayerRooms" ColumnName="NumWomenPrayerRooms" />
+                <ScalarProperty Name="NumAgeRelaxation3" ColumnName="NumAgeRelaxation3" />
+                <ScalarProperty Name="NumMaternityLeave" ColumnName="NumMaternityLeave" />
+                <ScalarProperty Name="NumPaternityLeave" ColumnName="NumPaternityLeave" />
+                <ScalarProperty Name="NumSRCForRegular" ColumnName="NumSRCForRegular" />
+                <ScalarProperty Name="NumSRCForRegularWithOneWomen" ColumnName="NumSRCForRegularWithOneWomen" />
+                <ScalarProperty Name="GMCEstablishment" ColumnName="GMCEstablishment" />
+                <ScalarProperty Name="COCImplementation" ColumnName="COCImplementation" />
+                <ScalarProperty Name="EstablishmentWHC" ColumnName="EstablishmentWHC" />
+                <ScalarProperty Name="NumComplaints" ColumnName="NumComplaints" />
+                <ScalarProperty Name="NumBoardBCT" ColumnName="NumBoardBCT" />
+                <ScalarProperty Name="NumCommitteeBCT" ColumnName="NumCommitteeBCT" />
+                <ScalarProperty Name="NumTaskForceBCT" ColumnName="NumTaskForceBCT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProvincialTaskForces">
+            <EntityTypeMapping TypeName="PCSWModel.ProvincialTaskForce">
+              <MappingFragment StoreEntitySet="ProvincialTaskForce">
+                <ScalarProperty Name="PT_Id" ColumnName="PT_Id" />
+                <ScalarProperty Name="P_Id" ColumnName="P_Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="NumMale" ColumnName="NumMale" />
+                <ScalarProperty Name="NumFemale" ColumnName="NumFemale" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

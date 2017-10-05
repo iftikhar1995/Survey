@@ -1,0 +1,982 @@
+﻿
+@{
+    ViewBag.Title = "Part3";
+    Layout = "~/Views/Shared/_PCSWLayout.cshtml";
+}
+
+<h3 id="main_err_part_3_v_2" class="text-center"></h3>
+
+<br />
+
+<div class="row">
+    <div class="col-md-*">
+
+        <div class="row">
+            <div col-md-*>
+                <!-- Board(s) -->
+                <div class="row">
+                    <div class="col-md-* col-xs-*">
+                        <p class="section_heading_part1 text-center"><b>Board(s)</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__________________________________________________________________________________________________________________________________________________</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-*">
+                        <div id="board_input">
+                            <div class="row" id="board_row_1">
+                                <div class="col-md-1 text-center">
+                                    <label>Name</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="text" class="form-control" id="BoardName1" placeholder="Board Name" />
+                                </div>
+
+                                <div class="col-md-1 text-center">
+                                    <label>Male</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="number" class="form-control" id="BoardMale1" placeholder="Please Enter a number" />
+                                </div>
+
+                                <div class="col-md-1 text-center">
+                                    <label>Female</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="number" class="form-control" id="BoardFemale1" placeholder="Please Enter a number" />
+                                </div>
+
+                            </div>
+                            <div class="row" id="board_error_row_1">
+
+                                <div class="col-md-offset-1 col-md-3">
+                                    <p class="text-danger text-center" id="err_board_name_1"></p>
+                                </div>
+
+                                <div class="col-md-offset-1 col-md-3">
+                                    <p class="text-danger text-center" id="err_board_male_1"></p>
+                                </div>
+
+                                <div class="col-md-offset-1 col-md-3">
+                                    <p class="text-danger text-center" id="err_board_female_1"></p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-offset-1 col-md-3">
+                                <button id="btn_add_board" class="btn btn-primary btn_plus_minus_part_3"><span class="glyphicon glyphicon-plus-sign"></span> &nbsp;&nbsp;ADD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                                <button id="btn_remove_board" class="btn btn-primary btn_plus_minus_part_3"><span class="glyphicon glyphicon-minus-sign"></span> &nbsp;&nbsp;REMOVE</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <br />
+
+        <div class="row">
+            <div col-md-*>
+                <!-- Committee(s) -->
+                <div class="row">
+                    <div class="col-md-* col-xs-*">
+                        <p class="section_heading_part1 text-center"><b>Committee(s)</b> __________________________________________________________________________________________________________________________________________________</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-*">
+                        <div id="committee_input">
+                            <div class="row" id="committee_row_1">
+                                <div class="col-md-1 text-center">
+                                    <label>Name</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="text" class="form-control" id="committeeName1" placeholder="Committee Name" />
+                                </div>
+
+                                <div class="col-md-1 text-center">
+                                    <label>Male</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="number" class="form-control" id="committeeMale1" placeholder="Please Enter a number" />
+                                </div>
+
+                                <div class="col-md-1 text-center">
+                                    <label>Female</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="number" class="form-control" id="committeeFemale1" placeholder="Please Enter a number" />
+                                </div>
+
+                            </div>
+                            <div class="row" id="committee_error_row_1">
+
+                                <div class="col-md-offset-1 col-md-3">
+                                    <p class="text-danger text-center" id="err_committee_name_1"></p>
+                                </div>
+
+                                <div class="col-md-offset-1 col-md-3">
+                                    <p class="text-danger text-center" id="err_committee_male_1"></p>
+                                </div>
+
+                                <div class="col-md-offset-1 col-md-3">
+                                    <p class="text-danger text-center" id="err_committee_female_1"></p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-offset-1 col-md-3">
+                                <button id="btn_add_committee" class="btn btn-primary btn_plus_minus_part_3"><span class="glyphicon glyphicon-plus-sign"></span> &nbsp;&nbsp;ADD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                                <button id="btn_remove_committee" class="btn btn-primary btn_plus_minus_part_3"><span class="glyphicon glyphicon-minus-sign"></span> &nbsp;&nbsp;REMOVE</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <br />
+
+        <div class="row">
+            <div col-md-*>
+                <!-- Taskforce(s) -->
+                <div class="row">
+                    <div class="col-md-* col-xs-*">
+                        <p class="section_heading_part1 text-center"><b>Taskforce(s)</b> ____________________________________________________________________________________________________________________________________________________</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-*">
+                        <div id="taskforce_input">
+                            <div class="row" id="taskforce_row_1">
+                                <div class="col-md-1 text-center">
+                                    <label>Name</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="text" class="form-control" id="taskforceName1" placeholder="Taskforce Name" />
+                                </div>
+
+                                <div class="col-md-1 text-center">
+                                    <label>Male</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="number" class="form-control" id="taskforceMale1" placeholder="Please Enter a number" />
+                                </div>
+
+                                <div class="col-md-1 text-center">
+                                    <label>Female</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="number" class="form-control" id="taskforceFemale1" placeholder="Please Enter a number" />
+                                </div>
+
+                            </div>
+                            <div class="row" id="board_error_row_1">
+
+                                <div class="col-md-offset-1 col-md-3">
+                                    <p class="text-danger text-center" id="err_taskforce_name_1"></p>
+                                </div>
+
+                                <div class="col-md-offset-1 col-md-3">
+                                    <p class="text-danger text-center" id="err_taskforce_male_1"></p>
+                                </div>
+
+                                <div class="col-md-offset-1 col-md-3">
+                                    <p class="text-danger text-center" id="err_taskforce_female_1"></p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-offset-1 col-md-3">
+                                <button id="btn_add_taskforce" class="btn btn-primary btn_plus_minus_part_3"><span class="glyphicon glyphicon-plus-sign"></span> &nbsp;&nbsp;ADD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                                <button id="btn_remove_taskforce" class="btn btn-primary btn_plus_minus_part_3"><span class="glyphicon glyphicon-minus-sign"></span> &nbsp;&nbsp;REMOVE</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <br />
+
+        <div class="row" id="content_row_part_3">
+            <div class="col-md-*">
+
+
+                <!--P14-->
+                <div class="row">
+                    <div class="col-md-* col-xs-*">
+                        <p class="section_heading_part1">Trainings held for Members __________________________________________________________________________________________________________</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2">
+                        <label>Board</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="number" placeholder="Please enter a number" min="0" class="form-control" id="training_board" />
+                    </div>
+                    <div class="col-md-offset-1 col-md-3">
+                        <p class="text-center text-danger" id="training_board_err"></p>
+                    </div>
+                </div>
+
+                <br />
+
+                <div class="row">
+                    <div class="col-md-2">
+                        <label>Committee</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="number" placeholder="Please enter a number" min="0" class="form-control" id="training_committee" />
+                    </div>
+                    <div class="col-md-offset-1 col-md-3">
+                        <p class="text-center text-danger" id="training_committee_err"></p>
+                    </div>
+                </div>
+
+                <br />
+
+                <div class="row">
+                    <div class="col-md-2">
+                        <label>Task Force</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="number" placeholder="Please enter a number" min="0" class="form-control" id="training_task_force" />
+                    </div>
+                    <div class="col-md-offset-1 col-md-3">
+                        <p class="text-center text-danger" id="training_task_force_err"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-md-offset-4 col-md-4">
+                <button class="btn btn-primary btn_next_part_1" id="btn_next_part_3">Next</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+
+            //****************************** Board ***********************************************
+            //Add Board Input row
+            var numBoardField = 1;
+            $("#btn_add_board").click(function () {
+
+                numBoardField++;
+                append_board_row();
+                append_board_error_row();
+                
+            });
+
+            function append_board_row() {
+
+                //------------------Board Name ------------------
+
+                var label_board = document.createElement("label");
+                var label_board_text = document.createTextNode("Name");
+                label_board.appendChild(label_board_text);
+
+                var label_board_div = document.createElement("div");
+                label_board_div.className = "col-md-1 text-center";
+                label_board_div.appendChild(label_board);
+
+                var input_board_name = document.createElement("Input");
+                input_board_name.type = "text";
+                input_board_name.placeholder = "Board Name";
+                input_board_name.id = "BoardName" + numBoardField.toString();
+                input_board_name.className = "form-control"
+
+                var first_col = document.createElement("div");
+                first_col.className = "col-md-3";
+
+                first_col.appendChild(input_board_name);
+
+                //------------------Board Male ------------------
+                var label_male = document.createElement("label");
+                var label_male_text = document.createTextNode("Males");
+                label_male.appendChild(label_male_text);
+
+                var label_male_div = document.createElement("div");
+                label_male_div.className = "col-md-1 text-center";
+                label_male_div.appendChild(label_male);
+
+                var input_board_male = document.createElement("Input");
+                input_board_male.type = "number";
+                input_board_male.placeholder = "Please Enter a number";
+                input_board_male.id = "BoardMale" + numBoardField.toString();
+                input_board_male.className = "form-control"
+
+                var second_col = document.createElement("div");
+                second_col.className = "col-md-3";
+
+                second_col.appendChild(input_board_male);
+
+                //------------------Board Female ----------------
+                var label_female = document.createElement("label");
+                var label_female_text = document.createTextNode("Females");
+                label_female.appendChild(label_female_text);
+
+                var label_female_div = document.createElement("div");
+                label_female_div.className = "col-md-1 text-center";
+                label_female_div.appendChild(label_female);
+
+                var input_board_female = document.createElement("Input");
+                input_board_female.type = "number";
+                input_board_female.placeholder = "Please Enter a number";
+                input_board_female.id = "BoardFemale" + numBoardField.toString();
+                input_board_female.className = "form-control"
+
+                var third_col = document.createElement("div");
+                third_col.className = "col-md-3";
+
+                third_col.appendChild(input_board_female);
+
+                var row = document.createElement("div");
+                row.className = "row";
+                row.id = "board_row_" + numBoardField.toString();
+
+                row.appendChild(label_board_div);
+                row.appendChild(first_col);
+
+                row.appendChild(label_male_div);
+                row.appendChild(second_col);
+
+                row.appendChild(label_female_div);
+                row.appendChild(third_col);
+
+                $("#board_input").append(row);
+            }
+
+            function append_board_error_row(){
+                var row = document.createElement("div");
+                row.className = "row";
+                row.id = "board_error_row_" + numBoardField;
+
+
+                //---------Error Board Name-------------------
+                var first_col = document.createElement("div");
+                first_col.className = "col-md-offset-1 col-md-3";
+
+                var err_board_name = document.createElement("p");
+                err_board_name.id = "err_board_name_" + numBoardField.toString();
+                err_board_name.className = "text-center text-danger";
+                //err_board_name.appendChild(document.createTextNode("TTTTTTTTTTTTTTT"));
+
+                first_col.appendChild(err_board_name);
+
+                //---------Error Board Male-------------------
+                var second_col = document.createElement("div");
+                second_col.className = "col-md-offset-1 col-md-3";
+
+                var err_board_male = document.createElement("p");
+                err_board_male.id = "err_board_male_" + numBoardField.toString();
+                err_board_male.className = "text-center text-danger";
+                //err_board_male.appendChild(document.createTextNode("MMMMMMMMMMMMMMMMMMMMMMM"));
+                second_col.appendChild(err_board_male);
+
+                //---------Error Board Female-----------------
+                var third_col = document.createElement("div");
+                third_col.className = "col-md-offset-1 col-md-3";
+
+                var err_board_female = document.createElement("p");
+                err_board_female.id = "err_board_female_" + numBoardField.toString();
+                err_board_female.className = "text-center text-danger";
+
+                //err_board_female.appendChild(document.createTextNode("FFFFFFFFFFFFFFFFFFFFFFFFFFF"));
+
+                third_col.appendChild(err_board_female);
+
+                //---------appending all----------------------
+                row.appendChild(first_col);
+                row.appendChild(second_col);
+                row.appendChild(third_col);
+
+                $("#board_input").append(row);
+            }
+
+            //Remove Board Input row
+            $("#btn_remove_board").click(function () {
+                if (numBoardField > 1) {
+                    var element_id = "#board_row_" + numBoardField.toString();
+                    $(element_id).remove();
+
+                    element_id = "#board_error_row_" + numBoardField.toString();
+                    $(element_id).remove();
+                    numBoardField--;
+                }
+            });
+
+            //****************************** Committee ***********************************************
+            //Add Committee Input row
+            var numCommitteeField = 1;
+            $("#btn_add_committee").click(function () {
+
+                numCommitteeField++;
+                append_committee_row();
+                append_committee_error_row();
+
+            });
+
+            function append_committee_row() {
+
+                //------------------Committee Name ------------------
+
+                var label_committee = document.createElement("label");
+                var label_committee_text = document.createTextNode("Name");
+                label_committee.appendChild(label_committee_text);
+
+                var label_committee_div = document.createElement("div");
+                label_committee_div.className = "col-md-1 text-center";
+                label_committee_div.appendChild(label_committee);
+
+                var input_committee_name = document.createElement("Input");
+                input_committee_name.type = "text";
+                input_committee_name.placeholder = "Committee Name";
+                input_committee_name.id = "committeeName" + numCommitteeField.toString();
+                input_committee_name.className = "form-control"
+
+                var first_col = document.createElement("div");
+                first_col.className = "col-md-3";
+
+                first_col.appendChild(input_committee_name);
+
+                //------------------Committee Male ------------------
+                var label_male = document.createElement("label");
+                var label_male_text = document.createTextNode("Males");
+                label_male.appendChild(label_male_text);
+
+                var label_male_div = document.createElement("div");
+                label_male_div.className = "col-md-1 text-center";
+                label_male_div.appendChild(label_male);
+
+                var input_committee_male = document.createElement("Input");
+                input_committee_male.type = "number";
+                input_committee_male.placeholder = "Please Enter a number";
+                input_committee_male.id = "committeeMale" + numCommitteeField.toString();
+                input_committee_male.className = "form-control"
+
+                var second_col = document.createElement("div");
+                second_col.className = "col-md-3";
+
+                second_col.appendChild(input_committee_male);
+
+                //------------------Committee Female ----------------
+                var label_female = document.createElement("label");
+                var label_female_text = document.createTextNode("Females");
+                label_female.appendChild(label_female_text);
+
+                var label_female_div = document.createElement("div");
+                label_female_div.className = "col-md-1 text-center";
+                label_female_div.appendChild(label_female);
+
+                var input_committee_female = document.createElement("Input");
+                input_committee_female.type = "number";
+                input_committee_female.placeholder = "Please Enter a number";
+                input_committee_female.id = "committeeFemale" + numCommitteeField.toString();
+                input_committee_female.className = "form-control"
+
+                var third_col = document.createElement("div");
+                third_col.className = "col-md-3";
+
+                third_col.appendChild(input_committee_female);
+
+                var row = document.createElement("div");
+                row.className = "row";
+                row.id = "committee_row_" + numCommitteeField.toString();
+
+                row.appendChild(label_committee_div);
+                row.appendChild(first_col);
+
+                row.appendChild(label_male_div);
+                row.appendChild(second_col);
+
+                row.appendChild(label_female_div);
+                row.appendChild(third_col);
+
+                $("#committee_input").append(row);
+            }
+
+            function append_committee_error_row() {
+                var row = document.createElement("div");
+                row.className = "row";
+                row.id = "committee_error_row_" + numCommitteeField;
+
+
+                //---------Error Committee Name-------------------
+                var first_col = document.createElement("div");
+                first_col.className = "col-md-offset-1 col-md-3";
+
+                var err_committee_name = document.createElement("p");
+                err_committee_name.id = "err_committee_name_" + numCommitteeField.toString();
+                err_committee_name.className = "text-center text-danger";
+                //err_board_name.appendChild(document.createTextNode("TTTTTTTTTTTTTTT"));
+
+                first_col.appendChild(err_committee_name);
+
+                //---------Error Committee Male-------------------
+                var second_col = document.createElement("div");
+                second_col.className = "col-md-offset-1 col-md-3";
+
+                var err_committee_male = document.createElement("p");
+                err_committee_male.id = "err_committee_male_" + numCommitteeField.toString();
+                err_committee_male.className = "text-center text-danger";
+                //err_board_male.appendChild(document.createTextNode("MMMMMMMMMMMMMMMMMMMMMMM"));
+                second_col.appendChild(err_committee_male);
+
+                //---------Error Board Female-----------------
+                var third_col = document.createElement("div");
+                third_col.className = "col-md-offset-1 col-md-3";
+
+                var err_committee_female = document.createElement("p");
+                err_committee_female.id = "err_committee_female_" + numCommitteeField.toString();
+                err_committee_female.className = "text-center text-danger";
+
+                //err_board_female.appendChild(document.createTextNode("FFFFFFFFFFFFFFFFFFFFFFFFFFF"));
+
+                third_col.appendChild(err_committee_female);
+
+                //---------appending all----------------------
+                row.appendChild(first_col);
+                row.appendChild(second_col);
+                row.appendChild(third_col);
+
+                $("#committee_input").append(row);
+            }
+
+            //Remove Committee Input row
+            $("#btn_remove_committee").click(function () {
+                if (numCommitteeField > 1) {
+                    var element_id = "#committee_row_" + numCommitteeField.toString();
+                    $(element_id).remove();
+
+                    element_id = "#committee_error_row_" + numCommitteeField.toString();
+                    $(element_id).remove();
+                    numCommitteeField--;
+                }
+            });
+
+            //****************************** Committee ***********************************************
+            //Add Committee Input row
+            var numTaskforceField = 1;
+            $("#btn_add_taskforce").click(function () {
+
+                numTaskforceField++;
+                append_taskforce_row();
+                append_taskforce_error_row();
+
+            });
+
+            function append_taskforce_row() {
+
+                //------------------Board Name ------------------
+
+                var label_taskforce = document.createElement("label");
+                var label_taskforce_text = document.createTextNode("Name");
+                label_taskforce.appendChild(label_taskforce_text);
+
+                var label_taskforce_div = document.createElement("div");
+                label_taskforce_div.className = "col-md-1 text-center";
+                label_taskforce_div.appendChild(label_taskforce);
+
+                var input_taskforce_name = document.createElement("Input");
+                input_taskforce_name.type = "text";
+                input_taskforce_name.placeholder = "Taskforce Name";
+                input_taskforce_name.id = "taskforceName" + numTaskforceField.toString();
+                input_taskforce_name.className = "form-control"
+
+                var first_col = document.createElement("div");
+                first_col.className = "col-md-3";
+
+                first_col.appendChild(input_taskforce_name);
+
+                //------------------Committee Male ------------------
+                var label_male = document.createElement("label");
+                var label_male_text = document.createTextNode("Males");
+                label_male.appendChild(label_male_text);
+
+                var label_male_div = document.createElement("div");
+                label_male_div.className = "col-md-1 text-center";
+                label_male_div.appendChild(label_male);
+
+                var input_taskforce_male = document.createElement("Input");
+                input_taskforce_male.type = "number";
+                input_taskforce_male.placeholder = "Please Enter a number";
+                input_taskforce_male.id = "taskforceMale" + numTaskforceField.toString();
+                input_taskforce_male.className = "form-control"
+
+                var second_col = document.createElement("div");
+                second_col.className = "col-md-3";
+
+                second_col.appendChild(input_taskforce_male);
+
+                //------------------Committee Female ----------------
+                var label_female = document.createElement("label");
+                var label_female_text = document.createTextNode("Females");
+                label_female.appendChild(label_female_text);
+
+                var label_female_div = document.createElement("div");
+                label_female_div.className = "col-md-1 text-center";
+                label_female_div.appendChild(label_female);
+
+                var input_taskforce_female = document.createElement("Input");
+                input_taskforce_female.type = "number";
+                input_taskforce_female.placeholder = "Please Enter a number";
+                input_taskforce_female.id = "taskforceFemale" + numTaskforceField.toString();
+                input_taskforce_female.className = "form-control"
+
+                var third_col = document.createElement("div");
+                third_col.className = "col-md-3";
+
+                third_col.appendChild(input_taskforce_female);
+
+                var row = document.createElement("div");
+                row.className = "row";
+                row.id = "taskforce_row_" + numTaskforceField.toString();
+
+                row.appendChild(label_taskforce_div);
+                row.appendChild(first_col);
+
+                row.appendChild(label_male_div);
+                row.appendChild(second_col);
+
+                row.appendChild(label_female_div);
+                row.appendChild(third_col);
+
+                $("#taskforce_input").append(row);
+            }
+
+            function append_taskforce_error_row() {
+                var row = document.createElement("div");
+                row.className = "row";
+                row.id = "taskforce_error_row_" + numTaskforceField;
+
+
+                //---------Error Taskforce Name-------------------
+                var first_col = document.createElement("div");
+                first_col.className = "col-md-offset-1 col-md-3";
+
+                var err_taskforce_name = document.createElement("p");
+                err_taskforce_name.id = "err_taskforce_name_" + numTaskforceField.toString();
+                err_taskforce_name.className = "text-center text-danger";
+                //err_board_name.appendChild(document.createTextNode("TTTTTTTTTTTTTTT"));
+
+                first_col.appendChild(err_taskforce_name);
+
+                //---------Error Taskforce Male-------------------
+                var second_col = document.createElement("div");
+                second_col.className = "col-md-offset-1 col-md-3";
+
+                var err_taskforce_male = document.createElement("p");
+                err_taskforce_male.id = "err_taskforce_male_" + numTaskforceField.toString();
+                err_taskforce_male.className = "text-center text-danger";
+                //err_board_male.appendChild(document.createTextNode("MMMMMMMMMMMMMMMMMMMMMMM"));
+                second_col.appendChild(err_taskforce_male);
+
+                //---------Error Board Female-----------------
+                var third_col = document.createElement("div");
+                third_col.className = "col-md-offset-1 col-md-3";
+
+                var err_taskforce_female = document.createElement("p");
+                err_taskforce_female.id = "err_taskforce_female_" + numTaskforceField.toString();
+                err_taskforce_female.className = "text-center text-danger";
+
+                //err_board_female.appendChild(document.createTextNode("FFFFFFFFFFFFFFFFFFFFFFFFFFF"));
+
+                third_col.appendChild(err_taskforce_female);
+
+                //---------appending all----------------------
+                row.appendChild(first_col);
+                row.appendChild(second_col);
+                row.appendChild(third_col);
+
+                $("#taskforce_input").append(row);
+            }
+
+            //Remove Committee Input row
+            $("#btn_remove_taskforce").click(function () {
+                if (numTaskforceField > 1) {
+                    var element_id = "#taskforce_row_" + numTaskforceField.toString();
+                    $(element_id).remove();
+
+                    element_id = "#taskforce_error_row_" + numTaskforceField.toString();
+                    $(element_id).remove();
+                    numTaskforceField--;
+                }
+            });
+
+            $("#btn_next_part_3").click(function () {
+                if (checkInput()) {
+                    storeData();
+                    window.location.href = "/GMIS/Part3";
+                }
+            });
+
+            function checkInput() {
+
+                clearAll();
+
+                var i = 1;
+                var name_id;
+                var male_id;
+                var female_id;
+                var errorField;
+                var mainErr;
+
+                for (; i <= numBoardField ; i++) {
+                    name_id = $("#BoardName" + i.toString()).val();
+                    male_id = $("#BoardMale" + i.toString()).val();
+                    female_id = $("#BoardFemale" + i.toString()).val();
+
+                    if (name_id == "") {
+                        errorField = "#err_board_name_" + i.toString();
+                        $(errorField).text("Please provide name of board");
+                        mainErr = document.createElement("span");
+                        mainErr.className  = "alert alert-danger";
+                        mainErr.innerHTML = "Please provide valid Information. Check form and try again.";
+                        $("#main_err_part_3_v_2").append(mainErr);
+
+                        $('html, body').animate({
+                            scrollTop: $("#BoardName" + i.toString()).offset().top - 100
+                        }, 500);
+
+                        return false;
+                    }
+
+                    if ( male_id.length == 0 || !(/^\d+$/.test(male_id)) || Number(male_id) < 0) {
+                        errorField = "#err_board_male_" + i.toString();
+                        $(errorField).text("Please Enter a valid Number of Male");
+                        mainErr = document.createElement("span");
+                        mainErr.className = "alert alert-danger";
+                        mainErr.innerHTML = "Please provide valid Information. Check form and try again.";
+                        $("#main_err_part_3_v_2").append(mainErr);
+                        
+                        $('html, body').animate({
+                            scrollTop: $("#BoardMale" + i.toString()).offset().top - 100
+                        }, 500);
+
+                        return false;
+                    }
+
+                    if ( female_id.length == 0|| !(/^\d+$/.test(female_id)) || Number(female_id) < 0) {
+                        errorField = "#err_board_female_" + i.toString();
+                        $(errorField).text("Please Enter a valid Number of Female");
+                        mainErr = document.createElement("span");
+                        mainErr.className = "alert alert-danger";
+                        mainErr.innerHTML = "Please provide valid Information. Check form and try again.";
+                        $("#main_err_part_3_v_2").append(mainErr);
+                        
+                        $('html, body').animate({
+                            scrollTop: $("#BoardFemale" + i.toString()).offset().top - 100
+                        }, 500);
+
+                        return false;
+                    }
+                }
+
+                i = 1;
+
+                for (; i <= numCommitteeField ; i++) {
+                    name_id = $("#committeeName" + i.toString()).val();
+                    male_id = $("#committeeMale" + i.toString()).val();
+                    female_id = $("#committeeFemale" + i.toString()).val();
+
+                    if (name_id == "") {
+                        errorField = "#err_committee_name_" + i.toString();
+                        $(errorField).text("Please provide name of board");
+                        mainErr = document.createElement("span");
+                        mainErr.className = "alert alert-danger";
+                        mainErr.innerHTML = "Please provide valid Information. Check form and try again.";
+                        $("#main_err_part_3_v_2").append(mainErr);
+
+                        $('html, body').animate({
+                            scrollTop: $("#committeeName" + i.toString()).offset().top - 100
+                        }, 500);
+
+                        return false;
+                    }
+
+                    if (male_id.length == 0 || !(/^\d+$/.test(male_id)) || Number(male_id) < 0) {
+                        errorField = "#err_committee_male_" + i.toString();
+                        $(errorField).text("Please Enter a valid Number of Male");
+                        mainErr = document.createElement("span");
+                        mainErr.className = "alert alert-danger";
+                        mainErr.innerHTML = "Please provide valid Information. Check form and try again.";
+                        $("#main_err_part_3_v_2").append(mainErr);
+                        
+                        $('html, body').animate({
+                            scrollTop: $("#committeeMale" + i.toString()).offset().top - 100
+                        }, 500);
+
+                        return false;
+                    }
+
+                    if (female_id.length == 0 || !(/^\d+$/.test(female_id)) || Number(female_id) < 0) {
+                        errorField = "#err_committee_female_" + i.toString();
+                        $(errorField).text("Please Enter a valid Number of Female");
+                        mainErr = document.createElement("span");
+                        mainErr.className = "alert alert-danger";
+                        mainErr.innerHTML = "Please provide valid Information. Check form and try again.";
+                        $("#main_err_part_3_v_2").append(mainErr);
+                        
+                        $('html, body').animate({
+                            scrollTop: $("#committeeFemale" + i.toString()).offset().top - 100
+                        }, 500);
+
+                        return false;
+                    }
+                }
+
+                i = 1;
+
+                for (; i <= numTaskforceField ; i++) {
+                    name_id = $("#taskforceName" + i.toString()).val();
+                    male_id = $("#taskforceMale" + i.toString()).val();
+                    female_id = $("#taskforceFemale" + i.toString()).val();
+
+                    if (name_id == "") {
+                        errorField = "#err_taskforce_name_" + i.toString();
+                        $(errorField).text("Please provide name of board");
+                        mainErr = document.createElement("span");
+                        mainErr.className = "alert alert-danger";
+                        mainErr.innerHTML = "Please provide valid Information. Check form and try again.";
+                        $("#main_err_part_3_v_2").append(mainErr);
+                        
+                        $('html, body').animate({
+                            scrollTop: $("#taskforceName" + i.toString()).offset().top - 100
+                        }, 500);
+
+                        return false;
+                    }
+
+                    if (male_id.length == 0 || !(/^\d+$/.test(male_id)) || Number(male_id) < 0) {
+                        errorField = "#err_taskforce_male_" + i.toString();
+                        $(errorField).text("Please Enter a valid Number of Male");
+                        mainErr = document.createElement("span");
+                        mainErr.className = "alert alert-danger";
+                        mainErr.innerHTML = "Please provide valid Information. Check form and try again.";
+                        $("#main_err_part_3_v_2").append(mainErr);
+                        
+                        $('html, body').animate({
+                            scrollTop: $("#taskforceMale" + i.toString()).offset().top - 100
+                        }, 500);
+
+                        return false;
+                    }
+
+                    if (female_id.length == 0 || !(/^\d+$/.test(female_id)) || Number(female_id) < 0) {
+                        errorField = "#err_taskforce_female_" + i.toString();
+                        $(errorField).text("Please Enter a valid Number of Female");
+                        mainErr = document.createElement("span");
+                        mainErr.className = "alert alert-danger";
+                        mainErr.innerHTML = "Please provide valid Information. Check form and try again.";
+                        $("#main_err_part_3_v_2").append(mainErr);
+                        
+                        $('html, body').animate({
+                            scrollTop: $("#taskforceFemale" + i.toString()).offset().top - 100
+                        }, 500);
+
+                        return false;
+                    }
+                }
+
+                if ($("#training_board").val() == "" || Number($("#training_board").val()) < 0) {
+                    $("#training_board_err").text("Please Provide a valid number.");
+                    return false;
+                }
+                if ($("#training_committee").val() == "" || Number($("#training_committee").val()) < 0) {
+                    $("#training_committee_err").text("Please Provide a valid number.");
+                    return false;
+                }
+                if ($("#training_task_force").val() == "" || Number($("#training_task_force").val()) < 0) {
+                    $("#training_task_force_err").text("Please Provide a valid number.");
+                    return false;
+                }
+
+                return true;
+            }
+
+            function clearAll() {
+                var i = 1;
+
+                $("#main_err_part_3_v_2").text("");
+
+                for (; i <= numBoardField ; i++) {
+                    $("#err_board_name_" + i.toString()).text("");
+                    $("#err_board_male_" + i.toString()).text("");
+                    $("#err_board_female_" + i.toString()).text("");
+                }
+
+                i = 1;
+                for (; i <= numCommitteeField ; i++) {
+                    $("#err_committee_name_" + i.toString()).text("");
+                    $("#err_committee_male_" + i.toString()).text("");
+                    $("#err_committee_female_" + i.toString()).text("");
+                }
+
+                i = 1;
+                for (; i <= numTaskforceField ; i++) {
+                    $("#err_taskforce_name_" + i.toString()).text("");
+                    $("#err_taskforce_male_" + i.toString()).text("");
+                    $("#err_taskforce_female_" + i.toString()).text("");
+                }
+
+                $("#training_board_err").text("");
+                $("#training_committee_err").text("");
+                $("#training_task_force_err").text("");
+            }
+
+            function storeData() {
+                
+                var boardData = [];
+                var committeeData = [];
+                var taskforceData = [];
+
+                for (var i = 1 ; i <= numBoardField ; i++) {
+
+                    boardData.push({ Name: $("#BoardName" + i.toString()).val(), NumMale: $("#BoardMale" + i.toString()).val(), NumFemale: $("#BoardFemale" + i.toString()).val() });
+                }
+
+                for (var i = 1 ; i <= numCommitteeField ; i++) {
+                    committeeData.push({ Name: $("#committeeName" + i.toString()).val(), NumMale: $("#committeeMale" + i.toString()).val(), NumFemale: $("#committeeFemale" + i.toString()).val() });
+                }
+
+                for (var i = 1 ; i <= numTaskforceField ; i++) {
+                    taskforceData.push({ Name: $("#taskforceName" + i.toString()).val(), NumMale: $("#taskforceMale" + i.toString()).val(), NumFemale: $("#taskforceFemale" + i.toString()).val() });
+                }
+
+
+                sessionStorage.boardData = JSON.stringify(boardData);
+                sessionStorage.committeeData = JSON.stringify(committeeData);
+                sessionStorage.taskforceData = JSON.stringify(taskforceData);
+
+                sessionStorage.trainingBoard = $("#training_board").val();
+                sessionStorage.trainingCommittee = $("#training_committee").val();
+                sessionStorage.trainingTaskforce = $("#training_task_force").val();
+            }
+        });
+    </script>
+}

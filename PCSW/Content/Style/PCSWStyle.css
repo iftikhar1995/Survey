@@ -1,0 +1,295 @@
+﻿
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #000000;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #000000;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #000000;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #000000;
+}
+
+
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.form-control:focus,
+.uneditable-input:focus {   
+  border-color: #672e72;
+  box-shadow: 0 1px 1px #672e72 inset, 0 0 8px #672e72;
+  outline: 0 none;
+}
+
+
+
+body {
+    font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif
+}
+
+.myContent {
+    margin-top:-46px
+}
+
+.gopLogoLeft {
+    width  : 100px;
+    height : 100px;
+    border : solid 2px #000000;
+   margin-left:-15px;
+}
+
+.pcswLogoRight {
+    width  : 100px;
+    height : 100px;
+    border : solid 2px #000000;
+    margin-left:80px;
+}
+
+
+.header_div{
+    background-color:#672e72;
+    
+}
+
+.header_text {
+    color:#FFF;
+    margin-top: 20px; 
+    text-align:center;       
+}
+
+.header_pcsw_text {
+    color:#FFF;
+    text-align:center; 
+}
+
+.my_inpt_field {
+    border:none;
+    border-bottom:solid 2px #672e72;
+    width:600px;
+    font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    
+}
+
+.content_area {
+    margin-top:50px;
+    padding:20px;
+}
+
+.btn_indx_1 {
+    margin-left:-15px;
+    width:150px;
+    background-color:#672e72;
+    border:none;
+    border-right:2px solid #380240;
+    border-radius:0px;
+    border-top-left-radius:5px;
+    border-bottom-left-radius:5px;
+}
+
+.btn_indx_1:hover{
+    background-color: #be14d1;
+    border-right:2px solid #672e72;
+}
+
+.btn_indx_1:focus{
+    background-color: #be14d1;
+    border-left:2px solid #672e72;
+}
+.btn_indx_2 {
+    margin-left:25px;
+    width:150px;
+    background-color:#672e72;
+    border:none;
+    border-left:2px solid #380240;
+    border-radius:0px;
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+}
+
+.btn_indx_2:hover{
+    background-color: #be14d1;
+    border-left:2px solid #672e72;
+}
+
+.btn_indx_2:focus{
+    background-color: #be14d1;
+    border-left:2px solid #672e72;
+}
+
+.proFormaDiv {
+    margin-bottom:40px;
+}
+
+.indexTFRow {
+    margin-bottom:40px;
+}
+
+.section_heading_part1{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.section_div_part1 {
+    margin-top:25px;
+}
+
+.btn_next_part_1 {
+    border:none;
+    background-color:#672e72;
+    width:250px;
+    font-size:20px;
+    margin-top:60px;
+}
+
+.btn_next_part_1:hover{
+    background-color: #be14d1;
+    border:2px solid #672e72;
+}
+
+.btn_next_part_1:focus{
+    background-color: #be14d1;
+    border:2px solid #672e72;
+}
+
+.err_part_1_col_1 {
+    padding-left:20px;
+}
+
+.err_part_1_col_2 {
+    padding-left:55px;
+}
+
+.err_part_1_col_1_washroom {
+    padding-left:90px;
+}
+
+.err_part_1_col_2_prayer_room {
+    padding-left:90px;
+}
+
+.prompt_text_part_2{
+    text-align:center;
+}
+
+.section_part_2_div{
+    margin-top:50px;
+    
+}
+
+.btn_next_part_2 {
+    border:none;
+    background-color:#672e72;
+    width:250px;
+    font-size:20px;
+    margin-top:30px;
+    margin-bottom:100px;
+}
+
+.btn_next_part_2:hover{
+    background-color: #be14d1;
+    border:2px solid #672e72;
+}
+
+.btn_next_part_2:focus{
+    background-color: #be14d1;
+    border:2px solid #672e72;
+}
+
+.contentAreaDownloadView{
+    margin-top:100px;
+}
+
+.btnDownloadView {
+    border:none;
+    background-color:#672e72;
+    width:500px;
+    font-size:20px;
+    margin-top:30px;
+    margin-bottom:50px;
+}
+
+.btnDownloadView:hover{
+    background-color: #be14d1;
+    border:2px solid #672e72;
+}
+
+.btnDownloadView:focus{
+    background-color: #be14d1;
+    border:2px solid #672e72;
+}
+.loadingDiv{
+    margin-left:-130px;
+    margin-top:-35px;
+}
+.content_area_not_supported{
+    margin-top:100px;
+    margin-left:50px;
+}
+
+.not_supported_heading{
+    font-size:30px;
+    
+}
+.solution_heading{
+     color:#672e72;
+     text-decoration:underline ; 
+}
+
+.li_text{
+    font-size:20px;
+}
+
+.year_picker_div{
+    margin-bottom:50px;
+}
+
+.womenFriendlyAmenitiesDiv{
+    margin-left:-70px;
+}
+
+.seperatePrayerAreaInput{
+    margin-left:-15px;
+    width:190px;
+}
+
+.washroomsInput{
+    margin-left:-25px;
+    width:185px;
+}
+
+.btn_plus_minus_part_3{
+    background-color:#672e72;
+    border:none;
+}
+
+.btn_plus_minus_part_3{
+    background-color:#672e72;
+    border:none;
+}
+
+.btn_plus_minus_part_3:hover{
+    background-color: #be14d1;
+    border:2px solid #672e72;
+}
+
+.btn_plus_minus_part_3:focus{
+    background-color: #be14d1;
+    border:2px solid #672e72;
+}

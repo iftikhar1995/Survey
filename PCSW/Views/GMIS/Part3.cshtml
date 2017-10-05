@@ -1,0 +1,127 @@
+﻿
+@{
+    ViewBag.Title = "Form-Part3";
+    Layout = "~/Views/Shared/_PCSWLayout.cshtml";
+}
+
+
+<div class="row content_area">
+    <div class="col-md-11">
+
+        <div class="row">
+            <div class="col-md-offset-1 col-md-11">
+                <h3><i>This will take a while depending on the data ...</i></h3>
+            </div>
+        </div>
+        
+        <!--Button-->
+        <div class="row section_part_2_div">
+            <div class="col-md-offset-4 col-md-4 col-xs-offset-4 col-xs-4">
+                <button class="btn btn-primary btn_next_part_2" id="btn_export_to_Excel">SAVE DATA</button>
+            </div>
+
+            <div class="col-md-4 col-xs-4 loadingDiv" id="loadingDiv">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+@section scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+
+            $("#btn_export_to_Excel").click(function () {
+
+                    console.log("Clicked.....");
+                    $("#btn_export_to_Excel").off("click");
+                    $("#loadingDiv").html('<img src="@Url.Content("~/Content/Images/loading.gif")" alt="Please Wait..." width="214 " height="138" class="img-responsive" />');
+
+                    writeXlsFile();
+
+            });
+
+
+            function writeXlsFile() {
+
+                var urlToSend;
+
+                if (sessionStorage.choice == "Provincial") {
+                    urlToSend = '@Url.Action("SaveProvincial", "GMIS")';
+
+                    var provincialData = {
+                        P_Type: sessionStorage.selectedType,
+                        Departments: sessionStorage.selectedOffice, NumEmployeeMale: sessionStorage.TotalNumberOfMen,
+                        NumEmployeeFemale: sessionStorage.TotalNumberOfWomen, NumEmployeeMaleFrom2012: sessionStorage.TotalNumberOfMenFrom2012,
+                        NumEmployeeFemaleFrom2012: sessionStorage.TotalNumberOfWomenFrom2012, NumGazettedMale: sessionStorage.gazettedMale,
+                        NumGazettedFemale: sessionStorage.gazettedFemale, NumGazettedMaleFrom2012: sessionStorage.gazettedMaleFrom2012,
+                        NumGazettedFemaleFrom2012: sessionStorage.gazettedFemaleFrom2012, NumNonGazettedMale: sessionStorage.noneGazettedMale,
+                        NumNonGazettedFemale: sessionStorage.noneGazettedFemale, NumNonGazettedMaleFrom2012: sessionStorage.noneGazettedMaleFrom2012,
+                        NumNonGazettedFemaleFrom2012: sessionStorage.noneGazettedFemaleFrom2012, NumContractMale: sessionStorage.contractMale,
+                        NumContractFemale: sessionStorage.contractFemale, NumContractMaleFrom2012: sessionStorage.contractMale,
+                        NumContractFemaleFrom2012: sessionStorage.contractFemaleFrom2012, NumWomenWashrooms: sessionStorage.numWashroomsFemale,
+                        NumWomenPrayerRooms: sessionStorage.numPrayerRoomsFemale, NumAgeRelaxation3: sessionStorage.numAgeRelexation3,
+                        NumMaternityLeave: sessionStorage.numMaternityLeave, NumPaternityLeave: sessionStorage.numPaternityLeave,
+                        NumSRCForRegular: sessionStorage.numSelectionContractualCommittee1,
+                        NumSRCForRegularWithOneWomen: sessionStorage.numSelectionContractualCommittee2,
+                        GMCEstablishment: sessionStorage.GMC, COCImplementation: sessionStorage.COCPunjabProtection,
+                        EstablishmentWHC: sessionStorage.workplaceHarassmentCommittees, NumComplaints: sessionStorage.numComplaintsReceived,
+                        NumActionsTaken: sessionStorage.numActionsTaken, NumBoardBCT: sessionStorage.trainingBoard,
+                        NumCommitteeBCT: sessionStorage.trainingCommittee, NumTaskForceBCT: sessionStorage.trainingTaskforce
+
+                    }
+
+                    d = {
+                        data : provincialData,
+                        boardData: JSON.parse(sessionStorage.boardData),
+                        committeeData: JSON.parse(sessionStorage.committeeData),
+                        taskforceData: JSON.parse(sessionStorage.taskforceData)
+                    };
+
+                } else {
+                    urlToSend = '@Url.Action("SaveDistrict", "GMIS")';
+                    d = {
+                        D_Type: sessionStorage.selectedType,
+                        District: sessionStorage.selectedDistrict, Departments: sessionStorage.selectedOffice, NumEmployeeMale: sessionStorage.TotalNumberOfMen,
+                        NumEmployeeFemale: sessionStorage.TotalNumberOfWomen, NumEmployeeMaleFrom2012: sessionStorage.TotalNumberOfMenFrom2012,
+                        NumEmployeeFemaleFrom2012: sessionStorage.TotalNumberOfWomenFrom2012, NumGazettedMale: sessionStorage.gazettedMale,
+                        NumGazettedFemale: sessionStorage.gazettedFemale, NumGazettedMaleFrom2012: sessionStorage.gazettedMaleFrom2012,
+                        NumGazettedFemaleFrom2012: sessionStorage.gazettedFemaleFrom2012, NumNonGazettedMale: sessionStorage.noneGazettedMale,
+                        NumNonGazettedFemale: sessionStorage.noneGazettedFemale, NumNonGazettedMaleFrom2012: sessionStorage.noneGazettedMaleFrom2012,
+                        NumNonGazettedFemaleFrom2012: sessionStorage.noneGazettedFemaleFrom2012, NumContractMale: sessionStorage.contractMale,
+                        NumContractFemale: sessionStorage.contractFemale, NumContractMaleFrom2012: sessionStorage.contractMale,
+                        NumContractFemaleFrom2012: sessionStorage.contractFemaleFrom2012, NumWomenWashrooms: sessionStorage.numWashroomsFemale,
+                        NumWomenPrayerRooms: sessionStorage.numPrayerRoomsFemale, NumAgeRelaxation3: sessionStorage.numAgeRelexation3,
+                        NumMaternityLeave: sessionStorage.numMaternityLeave, NumPaternityLeave: sessionStorage.numPaternityLeave,
+                        NumSRCForRegular: sessionStorage.numSelectionContractualCommittee1,
+                        NumSRCForRegularWithOneWomen: sessionStorage.numSelectionContractualCommittee2,
+                        GMCEstablishment: sessionStorage.GMC, COCImplementation: sessionStorage.COCPunjabProtection,
+                        EstablishmentWHC: sessionStorage.workplaceHarassmentCommittees, NumComplaints: sessionStorage.numComplaintsReceived,
+                        NumActionsTaken: sessionStorage.numActionsTaken
+                    };
+                }
+
+                var request =  $.ajax({
+                                    url: urlToSend,
+                                    type: "POST",
+                                    data: d,
+                                    dataType: "json",
+                                    success: function () {
+                                            window.location.href = '@Url.Action("Index", "GMIS")';
+                                    },
+                                    error: function () {
+                                        window.location.href = '@Url.Action("ErrorView", "GMIS")';
+                                    }
+                });
+
+
+            }
+
+
+        });
+
+
+    </script>
+}

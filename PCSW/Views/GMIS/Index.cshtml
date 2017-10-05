@@ -1,0 +1,195 @@
+﻿
+@{
+    ViewBag.Title = "Form";
+    Layout = "~/Views/Shared/_PCSWLayout.cshtml";
+}
+
+<div class="row content_area">
+
+    <div class="col-md-* col-xs-*">
+
+       
+            <div class="row">
+                <div class="col-md-offset-1 col-md-* col-xs-offset-1 col-xs-* proFormaDiv">
+                    <p><b>Pro forma : </b>Provision of Relevant Data on Punjab Gender Parity Report/ Gender Management  Information System (GMIS)</p>
+                </div>
+            </div>
+
+            <div class="row indexTFRow">
+                <div class="col-md-* col-xs-*">
+                    <div class="row">
+                        <div class="col-md-offset-4 col-md-* col-xs-offset-4 col-xs-*">
+                            <input type="text" placeholder="Focal Person" class="form-control" id="focalPersonTF" name="focalPersonTF" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-4 col-md-* col-xs-offset-4 col-xs-*">
+                            <p class="text text-danger" id="focalPersonError" name="focalPersonError"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row indexTFRow">
+                <div class="col-md-* col-xs-*">
+                    <div class="row">
+                        <div class="col-md-offset-4 col-md-* col-xs-offset-4 col-xs-*">
+                            <input type="text" placeholder="Contact Number(03*********)" class="form-control" id="contactNumberTF" name="contactNumberTF" />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-offset-4 col-md-* col-xs-offset-4 col-xs-*">
+                            <p class="text text-danger" id="contactNumberError" name="contactNumberError"></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-offset-4 col-md-1 col-xs-offset-4 col-xs-1">
+                    <button class="btn btn-success btn_indx_1" id="btn_provisional" name="btn_provisional">Provincial</button>
+                </div>
+                <div class="col-md-4 col-xs-4">
+                    <button class="btn btn-success btn_indx_2" id="btn_district" name="btn_district">District</button>
+                </div>
+            </div>
+
+       
+    </div>
+
+</div>
+
+@section scripts {
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            if (typeof (Storage) == "undefined") {
+                
+            }
+
+            removeAllFromSS();
+            $("#btn_district").click(function () {
+
+
+                if (checkInputData()) {
+
+                    sessionStorage.focalPerson = $("#focalPersonTF").val();
+                    sessionStorage.contactNumber = $("#contactNumberTF").val();
+                    sessionStorage.choice = "District";
+                    sessionStorage.Index = "done";
+                    window.location.href = '@Url.Action("Part1", "GMIS")';
+                }
+
+            });
+
+            $("#btn_provisional").click(function () {
+                if (checkInputData()) {
+                    sessionStorage.focalPerson = $("#focalPersonTF").val();
+                    sessionStorage.contactNumber = $("#contactNumberTF").val();
+                    sessionStorage.choice = "Provincial";
+
+                    window.location.href = '@Url.Action("Part1", "GMIS")';
+                }
+            });
+
+            function checkInputData() {
+
+                var focalPerson = $("#focalPersonTF").val();
+                var contactNumber = $("#contactNumberTF").val();
+                var focalPersonErr = $("#focalPersonError");
+                var contactNumberErr = $("#contactNumberError");
+
+                focalPersonErr.text("");
+                contactNumberErr.text("");
+
+
+                if (!focalPerson) {
+                    focalPersonErr.text("Name of Focal Person is required.");
+                    return false;
+
+                } else if (!contactNumber) {
+                    contactNumberErr.text("Contact Number of Focal Person is required.");
+                    return false;
+
+                } else {
+
+                    regx = /^03[0-9]{2}(?!1234567)(?!1111111)(?!7654321)[0-9]{7}/;
+                    if (!contactNumber.match(regx)) {
+                        contactNumberErr.text("Please enter a valid Phone Number");
+                        return false;
+                    }
+
+                    return true;
+                }
+
+            }
+
+            function removeAllFromSS() {
+
+                //--------------------------Extar Keys---------------------------------------------
+                sessionStorage.removeItem("Index");
+                sessionStorage.removeItem("Part1");
+                sessionStorage.removeItem("Part2");
+
+                //--------------------------Index--------------------------------------------------
+                sessionStorage.removeItem("focalPerson");
+                sessionStorage.removeItem("contactNumber");
+                sessionStorage.removeItem("choice");
+                //--------------------------Part1--------------------------------------------------
+                sessionStorage.removeItem("gazettedMale");
+                sessionStorage.removeItem("gazettedFemale");
+
+                sessionStorage.removeItem("noneGazettedMale");
+                sessionStorage.removeItem("noneGazettedFemale");
+
+                sessionStorage.removeItem("contractMale");
+                sessionStorage.removeItem("contractFemale");
+
+                sessionStorage.removeItem("washroomsFemale");
+                sessionStorage.removeItem("prayerRoomsFemale");
+
+                //--------------------------Part2--------------------------------------------------
+                sessionStorage.removeItem("numAgeRelexation3");
+                sessionStorage.removeItem("numMaternityLeave");
+                sessionStorage.removeItem("numPaternityLeave");
+                sessionStorage.removeItem("numSelectionContractualCommittee");
+                sessionStorage.removeItem("numComplaintsReceived");
+                sessionStorage.removeItem("numActionsTaken");
+                sessionStorage.removeItem("GMC");
+                sessionStorage.removeItem("COCPunjabProtection");
+                sessionStorage.removeItem("workplaceHarassmentCommittees");
+
+                //--------------------------Part3--------------------------------------------------
+                sessionStorage.removeItem("numBoardBCT");
+                sessionStorage.removeItem("numCommitteeBCT");
+                sessionStorage.removeItem("numTaskForceBCT");
+
+                sessionStorage.removeItem("numMaleBoard");
+                sessionStorage.removeItem("numMaleCommittee");
+                sessionStorage.removeItem("numMaleTaskForce");
+
+                sessionStorage.removeItem("numFemaleBoard");
+                sessionStorage.removeItem("numFemaleCommittee");
+                sessionStorage.removeItem("numFemaleTaskForce");
+
+                sessionStorage.removeItem("tenureOfBoard");
+                sessionStorage.removeItem("tenureOfCommittee");
+                sessionStorage.removeItem("tenureOfTaskForce");
+
+                sessionStorage.removeItem("vacantPositionsBoard");
+                sessionStorage.removeItem("vacantPositionsCommittee");
+                sessionStorage.removeItem("vacantPositionsTaskForce");
+
+                sessionStorage.removeItem("numMemberTrainings");
+
+                sessionStorage.removeItem("TotalNumberOfWomen");
+                sessionStorage.removeItem("TotalNumberOfMen");
+                sessionStorage.removeItem("year");
+            }
+        });
+
+
+    </script>
+}
