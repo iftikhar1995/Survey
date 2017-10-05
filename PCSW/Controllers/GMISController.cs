@@ -240,7 +240,7 @@ namespace PCSW.Controllers
             //}
             //catch (Exception e)
             //{
-                return RedirectToAction("ErrorView", "GMIS", null);
+                //return RedirectToAction("ErrorView", "GMIS", null);
             //}
 
             
